@@ -59,8 +59,7 @@ function llr_manager.activate(self)
                 end
             end
         end,
-        true
-    );
+        true);
 
 end
 
