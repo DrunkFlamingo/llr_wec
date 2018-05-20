@@ -108,8 +108,8 @@
 --# assume CM.get_campaign_ui_manager: method() --> CUIM
 --# assume CM.callback: method(
 --#     callback: function(),
---#     delay: number,
---#     name: string
+--#     delay: number?,
+--#     name: string?
 --# )
 --# assume CM.repeat_callback: method(
 --#     callback: function(),
@@ -165,6 +165,8 @@
 --# assume CM.pending_battle_cache_get_attacker: method(pos: int) --> (CA_CQI, CA_CQI, string)
 --# assume CM.force_change_cai_faction_personality: method(key: string, personality: string)
 --# assume CM.transfer_region_to_faction: method(region: string, faction:string)
+--# assume CM.award_experience_level: method(char_lookup_str: string, level: int)
+--# assume CM.kill_character: method(lookup: string, kill_army: boolean, throughcq: boolean)
 
 
 -- CAMPAIGN UI MANAGER
@@ -184,7 +186,10 @@
 --# assume CA_CHAR.region: method() --> CA_REGION
 --# assume CA_CHAR.faction: method() --> CA_FACTION
 --# assume CA_CHAR.military_force: method() --> CA_MILITARY_FORCE
-
+--# assume CA_CHAR.character_subtype: method(subtype: string) --> boolean
+--# assume CA_CHAR.get_forename: method() --> string
+--# assume CA_CHAR.command_queue_index: method() --> CA_CQI
+--# assume CA_CHAR.rank: method() --> int
 -- CHARACTER LIST
 --# assume CA_CHAR_LIST.num_items: method() --> number
 --# assume CA_CHAR_LIST.item_at: method(index: number) --> CA_CHAR
@@ -209,6 +214,7 @@
 --UNIT_LIST
 
 --#assume CA_UNIT_LIST.num_items: method() --> number
+--# assume CA_UNIT_LIST.item_at: method(j: number) --> CA_UNIT
 
 
 -- REGION
