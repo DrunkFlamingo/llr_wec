@@ -1,8 +1,8 @@
 cm:set_saved_value("wec_ll_revival", true);
-local llr_lord = {} --# assume llr_lord: LLR_LORD
-local llr_manager = {} --# assume llr_manager: LLR_MANAGER
+llr_lord = {} --# assume llr_lord: LLR_LORD
+llr_manager = {} --# assume llr_manager: LLR_MANAGER
 --toggle this to turn logging on or off.
-isLogAllowed = true --:boolean
+isLogAllowed = false --:boolean
 
 --v function(text: string)
 function LLRLOG(text)
@@ -246,6 +246,7 @@ end
 --v function(self: LLR_MANAGER)
 function llr_manager.activate(self)
   LLRLOG("Activating the Manager!");
+    core:trigger_event("LegendaryLordModelActivated")
     core:add_listener(
         "llr_manager",
         "FactionJoinsConfederation",
@@ -274,7 +275,10 @@ function llr_manager.activate(self)
         true);
 
 end
-
+_G.llr_manager = llr_manager;
+_G.llr_lord = llr_lord
+LLRLOG("Init Finished")
+output("WEC: LEGENDARY LORD REVIVES ACTIVE")
 
 function wec_ll_revival()
 
@@ -342,5 +346,4 @@ end
 
 	
 end
-
 
