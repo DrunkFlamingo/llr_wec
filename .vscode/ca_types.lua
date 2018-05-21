@@ -167,7 +167,7 @@
 --# assume CM.transfer_region_to_faction: method(region: string, faction:string)
 --# assume CM.award_experience_level: method(char_lookup_str: string, level: int)
 --# assume CM.kill_character: method(lookup: string, kill_army: boolean, throughcq: boolean)
-
+--# assume CM.set_character_immortality: method(lookup: string, immortal: boolean)
 
 -- CAMPAIGN UI MANAGER
 --# assume CUIM.get_char_selected: method() --> string
@@ -337,6 +337,7 @@
 --# assume global get_character_by_cqi: function(cqi: CA_CQI) --> CA_CHAR
 --# assume global get_region: function(regionName: string) --> CA_REGION
 --# assume global get_faction: function(factionName: string) --> CA_FACTION
+--# assume global get_character_by_mf_cqi: function(cqi: CA_CQI) --> CA_CHAR
 --# assume global char_lookup_str: function(char: CA_CQI | CA_CHAR | number) --> string
 --# assume global kill_all_armies_for_faction: function(factionName: string)
 --# assume global get_cm: function() --> CM
