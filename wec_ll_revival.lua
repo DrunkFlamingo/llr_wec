@@ -2,7 +2,7 @@ cm:set_saved_value("wec_ll_revival", true);
 llr_lord = {} --# assume llr_lord: LLR_LORD
 llr_manager = {} --# assume llr_manager: LLR_MANAGER
 --toggle this to turn logging on or off.
-isLogAllowed = false --:boolean
+isLogAllowed = true --:boolean
 
 --v function(text: string)
 function LLRLOG(text)
@@ -285,6 +285,7 @@ function wec_ll_revival()
 LLRLOG("Checkpoint [1]")
 llr = llr_manager.new()
 _G.llr = llr
+
 llr:activate()
 
 --lord template
