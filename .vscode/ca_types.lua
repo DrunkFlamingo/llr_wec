@@ -343,5 +343,6 @@
 --# assume global kill_all_armies_for_faction: function(factionName: string)
 --# assume global get_cm: function() --> CM
 --# assume global Get_Character_Side_In_Last_Battle: function(char: CA_CHAR) --> BATTLE_SIDE
-
+--# assume global q_setup: function()
+--# assume global set_up_rank_up_listener: function(quest_table: vector<vector<string | number>>, subtype: string, infotext: vector<string | number>)
 
