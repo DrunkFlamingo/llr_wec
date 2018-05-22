@@ -107,6 +107,7 @@ end
 --v function(self: LLR_LORD, quest_table: vector<vector<string | number>>)
 function llr_lord.add_quest(self, quest_table)
     self.quest_table = quest_table
+    self.has_quest_set = true
     for i = 1, #quest_table do
         local current_quest_record = quest_table[i];
         local current_mission_key = current_quest_record[3];
