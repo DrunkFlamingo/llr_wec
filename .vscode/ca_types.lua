@@ -229,7 +229,7 @@
 --# assume CA_SETTLEMENT.logical_position_x: method() --> number
 --# assume CA_SETTLEMENT.logical_position_y: method() --> number
 --# assume CA_SETTLEMENT.get_climate: method() --> string
-
+--# assume CA_SETTLEMENT.is_null_interface: method() --> boolean
 --SLOT LIST
 --# assume CA_SLOT_LIST.num_items: method() --> number
 --# assume CA_SLOT_LIST.item_at: method(index: number) --> CA_SLOT
@@ -275,6 +275,7 @@
 --# assume CA_FACTION.at_war_with: method(faction: string) --> boolean
 --# assume CA_FACTION.region_list: method() --> CA_REGION_LIST
 --# assume CA_FACTION.has_effect_bundle: method(bundle:string) --> boolean
+--# assume CA_FACTION.home_region: method() --> CA_REGION
 
 -- FACTION LIST
 --# assume CA_FACTION_LIST.num_items: method() --> number
